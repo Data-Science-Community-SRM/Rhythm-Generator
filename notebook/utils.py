@@ -198,7 +198,6 @@ def word_to_event(words, word2event):
 
 def write_midi(words, word2event, output_path, prompt_path=None):
     events = word_to_event(words, word2event)
-    # get downbeat and note (no time)
     temp_notes = []
     temp_chords = []
     temp_tempos = []
