@@ -69,6 +69,9 @@ def read_items(file_path):
 def quantize_items(items,ticks=120):
     grids=np.arange(0,items[-1].start,ticks,dtype=int)
     for item in items:
+        if len(grids) == 0:  # Add this condition
+            print("Warning: grids is empty, skipping item quantization.")
+            continue
         index=np.argmin(abs(grids - item.start))
         shift = grids[index] -item.start
         item.start += shift
