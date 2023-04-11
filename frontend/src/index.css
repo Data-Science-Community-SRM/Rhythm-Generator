@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+  .animation-delay-2000{
+    animaion-delay: 2s;
+  }
+  .animation-delay-4000{
+    animaion-delay: 4s;
+  }
+}
