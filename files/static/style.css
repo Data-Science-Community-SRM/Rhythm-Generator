@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.main-container {
+  /* background-image: url("https://indiaforensic.com/certifications/wp-content/uploads/2017/01/agriculture-768x432.jpg"); */
+  background-image: url("bgimg1.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+body {
+  margin: 0px;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+.button-sty {
+  padding: 30px;
+  width: 250px;
+  border-color: #fff;
+  border-radius: 20px;
+  background-color: #060906;
+  border-radius: 10px;
+  border-width: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button-sty:link {
+  border-color: rgb(6, 7, 6);
+}
+.button-sty:visited {
+  color: #fff;
+}
+
+.button-sty :hover {
+  background-color: transparent;
+}
+
+.button-sty :active {
+  border-color: black;
+}
+.about-us-section-container {
+  /* background: linear-gradient(
+    125deg,
+    #ecfcff 0%,
+    #ecfcff 40%,
+    #b2fcff calc(40% + 1px),
+    #b2fcff 60%,
+    #5edfff calc(60% + 1px),
+    #5edfff 72%,
+    #3e64ff calc(72% + 1px),
+    #3e64ff 100%
+  ); */
+  /* background-color: #40E0D0 ; */
+  /* background-color: #f9fbfe; */
+  /* background: rgb(64, 224, 208 ); */
+  /* background-image: radial-gradient(#fff8db, #fae38c); */
+  /* background-color: #8AFF8A; */
+  background-image: linear-gradient(to top,#040505, #c1fcd3);
+  height: 100%;
+}
+.about-content {
+  color: #7b8794;
+  font-weight: bold;
+  font-family: "Roboto";
+}
+.card {
+  border-radius: 30px;
+  height: 450px;
+}
+
+.follow-us-section {
+  background-image: radial-gradient(#fff8db, rgb(206, 251, 138));
+
+  height: 100%;
+}
+.follow-us-section-heading {
+  text-align: center;
+  color: #183b56;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+}
+.follow-us-icon-container {
+  background-color: #040504;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin: 15px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 22px;
+}
+.icon {
+  color: #111;
+  font-size: 35px;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-image: radial-gradient(#2ecc71 , #1abc9c); */
+  background-image: radial-gradient(#090d09, #0c0d0c);
+}
+nav {
+  display: flex;
+  width: 84%;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.logo {
+  font-size: 2.5em;
+  color: white;
+  user-select: none;
+}
+nav ul li a:hover {
+  color: #fff;
+}
+nav ul li a:hover::after {
+  color: #fff;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #fff;
+  font-weight: 600;
+  color: #162938;
+}

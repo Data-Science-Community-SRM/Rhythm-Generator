@@ -1,3 +1,6 @@
+from flask import Flask,render_template,redirect,request
+import numpy as np
+
 from model import RythmTransformer
 import os
 import argparse
@@ -6,7 +9,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 def main(num_samples, num_bars, temperature, prompt_dir ,output_dir):
     # declare model
     model = RythmTransformer(
-        checkpoint='REMI-tempo-chord-checkpoint',
+        checkpoint='files/REMI-tempo-chord-checkpoint',
         is_training=False)
 
     from_scratch_path = output_dir + 'from_scratch/'
@@ -35,7 +38,36 @@ def main(num_samples, num_bars, temperature, prompt_dir ,output_dir):
     # close model
     model.close()
 
-if __name__ == '__main__':
+#creating the app
+app=Flask(__name__)
+
+@app.route('/',methods=['GET',"POST"])
+def index_page():
+    return render_template('index.html')
+
+@app.route('/generatemusic')
+def rec_page():
+    return render_template('generatemusic.html')
+
+@app.route('/generate',methods=['GET','POST'])
+def generate():
+    if request.method == 'POST':
+        f = [x for x in request.form.values()]
+        d1 = [np.array(f)]
+        print(f)
+        num_samples = int(f[0])
+        num_bars = int(f[1])
+        temperature = float(f[2])
+        prompt_dir = './data/evaluation/'
+        output_dir = './result/'
+        main(num_samples,num_bars,temperature,prompt_dir, output_dir)
+        return render_template('generatemusic.html', generated_music= f)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+'''if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate samples')
     parser.add_argument("--ns", default= 10, type= int, help= "number of samples")
     parser.add_argument("--nb", default= 16, type = int, help= "number of target bars")
@@ -57,4 +89,4 @@ if __name__ == '__main__':
     print("With {} temperature".format(temperature))
     print("Input promt root folder {}".format(prompt_dir))
     print("Output root folder {}".format(output_dir))
-    main(num_samples,num_bars,temperature,prompt_dir, output_dir)
+    main(num_samples,num_bars,temperature,prompt_dir, output_dir)'''

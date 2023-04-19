@@ -7,6 +7,8 @@ import time
 import os
 import tensorflow as tf
 
+tf.compat.v1.disable_eager_execution()
+
 def embedding_lookup(lookup_table, x):
     return tf.compat.v1.nn.embedding_lookup(lookup_table, x)
 
