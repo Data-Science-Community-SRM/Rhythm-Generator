@@ -23,8 +23,8 @@ They consist of short note sequences(4,8,16 bar), and are organized into 12 diff
 * User will be able to save the generated music
 
 ## Setup
-1. Clone this repository
-2. Install required packages
+* Clone this repository
+* Install required packages
 
 ```pip install -r requirements.txt```
     
