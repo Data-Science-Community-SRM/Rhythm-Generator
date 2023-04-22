@@ -24,7 +24,23 @@ They consist of short note sequences(4,8,16 bar), and are organized into 12 diff
 ## Setup
 1. Clone this repository
 2. Install required packages
-```{python}
-     pip install -r requirements.txt
+
+```pip install -r requirements.txt```
+    
+## Instructions to Run
+* After installing the required packages run the flask server
+
+```python app.py```
+
+* After the midi file has been generated use any of the following links to convert it to an mp3 file - 
+   
+   [Converter 1](https://www.zamzar.com/convert/midi-to-mp3/)
+   
+   [Converter 2](https://audio.online-convert.com/convert/midi-to-mp3)
+   
+   [Converter 3](https://converter.app/midi-to-mp3/)
+
+
+
      
      
