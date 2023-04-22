@@ -61,7 +61,7 @@ def generate():
         prompt_dir = './data/evaluation/'
         output_dir = './result/'
         main(num_samples,num_bars,temperature,prompt_dir, output_dir)
-        return render_template('generatemusic.html', generated_music= f)
+        return render_template('output.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
