@@ -1,5 +1,6 @@
-from flask import Flask,render_template,redirect,request
+from flask import Flask,render_template,redirect,request,send_file
 import numpy as np
+#from midiutil import MIDIFile
 
 from model import RythmTransformer
 import os
@@ -37,7 +38,7 @@ def main(num_samples, num_bars, temperature, prompt_dir ,output_dir):
 
     # close model
     model.close()
-
+#myMIDI = MIDIFile(1)
 #creating the app
 app=Flask(__name__)
 
@@ -55,13 +56,26 @@ def generate():
         f = [x for x in request.form.values()]
         d1 = [np.array(f)]
         print(f)
-        num_samples = int(f[0])
-        num_bars = int(f[1])
-        temperature = float(f[2])
+        num_samples = 1
+        num_bars = int(f[0])
+        temperature = float(f[1])
         prompt_dir = './data/evaluation/'
         output_dir = './result/'
         main(num_samples,num_bars,temperature,prompt_dir, output_dir)
+        '''new_file = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/0.midi', 'wb')
+        myMIDI.writeFile(new_file)
+        new_file.close()'''
+
+        '''new_file = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/0.midi', 'rb')
+        return send_file(new_file, mimetype='audio/midi')'''
         return render_template('output.html')
+
+@app.route('/download')
+def download():
+    new_file = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/0.midi', 'rb')
+    return send_file(new_file, mimetype='audio/midi')
+
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
