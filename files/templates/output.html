@@ -8,17 +8,33 @@
 </head>
 <body>
     <h1>Music Successfully Generated</h1>
-    <div>
-        <div class="home-section-container">
-            <div class="main-container d-flex justify-content-center flex-column">
-              <div class="text-center">
-                <div class="d-flex flex-row justify-content-center m-5">
-    <a class="button-sty" href="/download">
-        Download midi file
+    <!--<div>
+    <a class="button-sty" href="/download0">
+        Download Sample 1
       </a>
     </div>
     <div>
-        
+        <a class="button-sty" href="/download1">
+            Download Sample 2
+        </a>
+    </div>-->
+    <div>
+        {% for i in range (1,no_samples+1) %}
+        <br>
+        <a class="button-sty" href="/download{{i}}">
+            Download Sample {{i}}
+          </a>
+        <br>
+        {% endfor %}
+    </div>
+
+
+    <div>
+        <h3>some online tools to convert midi file to mp3 are listed below</h3>
+
+        <a href="https://www.zamzar.com/convert/midi-to-mp3/"> midi to mp3 </a><br>
+        <a href="https://audio.online-convert.com/convert/midi-to-mp3"> midi to mp3 </a><br>
+        <a href="https://converter.app/midi-to-mp3/"> midi to mp3 </a>
     </div>
 
 </body>

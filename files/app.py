@@ -56,9 +56,9 @@ def generate():
         f = [x for x in request.form.values()]
         d1 = [np.array(f)]
         print(f)
-        num_samples = 1
-        num_bars = int(f[0])
-        temperature = float(f[1])
+        num_samples = int(f[0])
+        num_bars = int(f[1])
+        temperature = float(f[2])
         prompt_dir = './data/evaluation/'
         output_dir = './result/'
         main(num_samples,num_bars,temperature,prompt_dir, output_dir)
@@ -68,14 +68,58 @@ def generate():
 
         '''new_file = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/0.midi', 'rb')
         return send_file(new_file, mimetype='audio/midi')'''
-        return render_template('output.html')
+        return render_template('output.html', no_samples = num_samples)
 
-@app.route('/download')
-def download():
+@app.route('/download1')
+def sample1():
     new_file = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/0.midi', 'rb')
-    return send_file(new_file, mimetype='audio/midi')
+    return send_file(new_file,mimetype='audio/midi')
 
-    
+@app.route('/download2')
+def sample2():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/1.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download3')
+def sample3():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/2.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download4')
+def sample4():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/3.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download5')
+def sample5():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/4.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download6')
+def sample6():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/5.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download7')
+def sample7():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/6.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download8')
+def sample8():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/7.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download9')
+def sample9():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/8.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
+@app.route('/download10')
+def sample10():
+    new_file1 = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/9.midi', 'rb')
+    return send_file(new_file1,mimetype='audio/midi')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
