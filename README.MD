@@ -1,3 +1,4 @@
+ ![Data Science Community](https://github.com/Data-Science-Community-SRM/template/raw/master/Header.png?raw=true)
 # Sound Spirit
 
 Effortlessly generate original melodies and harmonies, tailored to your preferences. Say goodbye to creative blocks, and say hello to a new era of music creation with SoundSpirit.
