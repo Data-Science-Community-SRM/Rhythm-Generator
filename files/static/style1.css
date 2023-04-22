@@ -1,0 +1,81 @@
+body{
+    background-image: url("bgimg1.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size:cover;
+}
+.login{
+    /* background-color: black; */
+    color: #000000a4;
+    height: 100vh;
+    width: 100%;
+}
+.formcl{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 10px;
+}
+.buttn{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    color: black;
+}
+.inpEl{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+* {
+    box-sizing: border-box;
+  }
+  input {
+    display:block;
+    width:70%;
+    margin:70px;
+    padding:30px;
+    font-size:xx-large;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .type-1 {
+    border-radius:100px;
+    border: 4px solid #0c0c0c;
+    transition: .3s border-color;
+    display: flex;
+    align-items: center;
+  }
+  .type-1:hover {
+    border: 1px solid #aaa;
+  }
+  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+  
+    /* usual styles */
+    padding:30px;
+    border:none;
+    background-color:#0b0b0c;
+    color:#fff;
+    font-size:xx-large;
+    font-weight:1000;
+    border-radius:50px;
+    width:70%;
+  
+  }
