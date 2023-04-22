@@ -5,7 +5,9 @@ import numpy as np
 from model import RythmTransformer
 import os
 import argparse
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0,2,3,4"
 
 def main(num_samples, num_bars, temperature, prompt_dir ,output_dir):
     # declare model
