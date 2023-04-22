@@ -1,3 +1,4 @@
+ ![Data Science Community](https://github.com/Data-Science-Community-SRM/template/raw/master/Header.png?raw=true)
 # Sound Spirit
 
 Effortlessly generate original melodies and harmonies, tailored to your preferences. Say goodbye to creative blocks, and say hello to a new era of music creation with SoundSpirit.
@@ -22,9 +23,25 @@ They consist of short note sequences(4,8,16 bar), and are organized into 12 diff
 * User will be able to save the generated music
 
 ## Setup
-1. Clone this repository
-2. Install required packages
-```{python}
-     pip install -r requirements.txt
+* Clone this repository
+* Install required packages
+
+```pip install -r requirements.txt```
+    
+## Instructions to Run
+* After installing the required packages run the flask server
+
+```python app.py```
+
+* After the midi file has been generated use any of the following links to convert it to an mp3 file - 
+   
+   [Converter 1](https://www.zamzar.com/convert/midi-to-mp3/)
+   
+   [Converter 2](https://audio.online-convert.com/convert/midi-to-mp3)
+   
+   [Converter 3](https://converter.app/midi-to-mp3/)
+
+
+
      
      
