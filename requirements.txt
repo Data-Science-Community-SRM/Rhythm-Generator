@@ -3,4 +3,6 @@ numpy
 seaborn
 matplotlib
 tensorflow
+miditoolkit
+Flask
 -e .
