@@ -32,7 +32,7 @@ They consist of short note sequences(4,8,16 bar), and are organized into 12 diff
    [Model.data](https://drive.google.com/file/d/152BHtFlyN69q53r4GFVlEP1y-jFyhvL0/view?usp=sharing)
 * After downloading the required files and installing the necessary packages, run the Flask server
 
-```python app.py```
+```python files/app.py```
 
 * After the midi file has been generated use any of the following links to convert it to an mp3 file - 
    
