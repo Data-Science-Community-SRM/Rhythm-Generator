@@ -46,11 +46,11 @@ app=Flask(__name__)
 
 @app.route('/',methods=['GET',"POST"])
 def index_page():
-    return render_template('dist/index.html')
+    return render_template('index.html')
 
 @app.route('/generatemusic')
 def rec_page():
-    return render_template('dist/generatemusic.html')
+    return render_template('generatemusic.html')
 
 @app.route('/generate',methods=['GET','POST'])
 def generate():
@@ -70,7 +70,7 @@ def generate():
 
         '''new_file = open('/Users/saisatyajonnalagadda/Documents/satna/Rhythm-Generator/result/from_scratch/0.midi', 'rb')
         return send_file(new_file, mimetype='audio/midi')'''
-        return render_template('dist/output.html', no_samples = num_samples)
+        return render_template('output.html', no_samples = num_samples)
 
 @app.route('/download1')
 def sample1():
