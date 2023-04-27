@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="output.css">
+
+</head>
+<body>
+    <h1>Music Successfully Generated</h1>
+
+    <div>
+        {% for i in range (1,no_samples+1) %}
+        <br>
+        <a class="button-sty" href="/download{{i}}">
+            Download Sample {{i}}
+          </a>
+        <br>
+        {% endfor %}
+    </div>
+
+
+    <div>
+        <h3>some online tools to convert midi file to mp3 are listed below</h3>
+
+        <a href="https://www.zamzar.com/convert/midi-to-mp3/"> midi to mp3 </a><br>
+        <a href="https://audio.online-convert.com/convert/midi-to-mp3"> midi to mp3 </a><br>
+        <a href="https://converter.app/midi-to-mp3/"> midi to mp3 </a>
+    </div>
+
+</body>
+</html>
