@@ -8,26 +8,33 @@
     <link rel="stylesheet" href="static/output.css">
 
 </head>
-<body>
-    <h1>Music Successfully Generated</h1>
-
-    <div>
+<body class="pt-52">
+    <h1 class="text-3xl text-center m-4">Music Successfully Generated</h1>
+    <div class="text-center ">
         {% for i in range (1,no_samples+1) %}
         <br>
+       <button class="pt-2 py-4 px-4 text-sm rounded-full bg-gradient-to-tl from-pink-200 to-indigo-600 opacity-70 hover:bg-gradient-to-br from-yellow-300 to-indigo-600 hover:opacity-80 border border-grey-900 ">
         <a class="button-sty" href="/download{{i}}">
             Download Sample {{i}}
           </a>
+       </button>
         <br>
         {% endfor %}
     </div>
 
 
-    <div>
-        <h3>some online tools to convert midi file to mp3 are listed below</h3>
+    <div class="text-center">
+        <h3 class="mb-3.5">some online tools to convert midi file to mp3 are listed below</h3>
 
+       <button class="pt-2 py-4 px-8 m-4 text-sm rounded-full bg-gradient-to-tl from-pink-200 to-indigo-600 opacity-70 hover:bg-gradient-to-br from-yellow-300 to-indigo-600 hover:opacity-80 border border-grey-900 ">
         <a href="https://www.zamzar.com/convert/midi-to-mp3/"> midi to mp3 </a><br>
-        <a href="https://audio.online-convert.com/convert/midi-to-mp3"> midi to mp3 </a><br>
-        <a href="https://converter.app/midi-to-mp3/"> midi to mp3 </a>
+       </button>
+        <button class="pt-2 py-4 px-8 text-sm rounded-full bg-gradient-to-tl from-pink-200 to-indigo-600 opacity-70 hover:bg-gradient-to-br from-yellow-300 to-indigo-600 hover:opacity-80 border border-grey-900 ">
+            <a href="https://audio.online-convert.com/convert/midi-to-mp3"> midi to mp3 </a><br>
+        </button>
+        <button class="pt-2 py-4 px-8 text-sm rounded-full bg-gradient-to-tl from-pink-200 to-indigo-600 opacity-70 hover:bg-gradient-to-br from-yellow-300 to-indigo-600 hover:opacity-80 border border-grey-900 ">
+            <a href="https://converter.app/midi-to-mp3/"> midi to mp3 </a>
+        </button>
     </div>
 
 </body>
