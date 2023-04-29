@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generate</title>
-    <link rel="stylesheet" href="static/output.css">
-</head>
-<body>
-    <div >
-       <h1 class="flex pt-52">Music Generator</h1>
-   
-        <!-- Main Input For Receiving Query to our ML -->
-       <form class="formcl" action="{{ url_for('generate')}}"method="post">
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div class="text-center">
+        <div class="pt-52 pb-3.5">
+            <h1 class="text-3xl font-bold mb-12">Music Generator</h1>
+        </div>
+      
+      <!-- Main Input For Receiving Query to our ML -->
+      <form class="mt-20" action="{{ url_for('generate')}}" method="post">
+        <input
+          class="bg-gray-50 border border-gray-800 text-gray-900 text-sm rounded-lg p-2.5  "
+          type="text"
+          name="Number of Samples"
+          placeholder="Number of Samples"
+          required="required"
+        />
 
-           <input class="type-1" type="text" name="Number of Samples" placeholder="Number of Samples" required="required" />
+        <input
+          class="bg-gray-50 border border-gray-800 text-gray-900 text-sm rounded-lg p-2.5 "
+          type="text"
+          name="number of target bars"
+          placeholder="number of target bars"
+          required="required"
+        />
 
-           <input class="type-1" type="text" name="number of target bars" placeholder="number of target bars" required="required" />
+        <input
+          class="bg-gray-50 border border-gray-800 text-gray-900 text-sm rounded-lg p-2.5 "
+          type="text"
+          name="temperature"
+          placeholder="temperature"
+          required="required"
+        />
 
-           <input class="type-1" type="text" name="temperature" placeholder="temperature" required="required" />
+        <button
+          class="pt-4 py-4 px-8 text-lg rounded-full bg-gradient-to-tl from-pink-200 to-indigo-600 opacity-70 hover:bg-gradient-to-br from-yellow-300 to-indigo-600 hover:opacity-80 border border-grey-900"
+          type="submit"
+        >
+          Generate
+        </button>
+      </form>
 
-           <button type="submit" >Generate</button>
-        
-       </form>
-   
-      <br>
-      <br>
+      <br />
+      <br />
       {{ generated_music }}
-   
     </div>
-   
-   
-   </body>
+  </body>
 </html>
