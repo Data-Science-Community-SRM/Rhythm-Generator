@@ -3,9 +3,9 @@ import os
 import fnmatch
 
 # Set path to your SoundFont file here
-sf2path = 'soundfont.sf2'
+sf2_path = 'soundfont.sf2'
 
-fs = FluidSynth(sf2path)
+fs = FluidSynth(sf2_path)
 
 for root, dirnames, filenames in os.walk('result/from_scratch'):
     for filename in fnmatch.filter(filenames, '*.midi'):
