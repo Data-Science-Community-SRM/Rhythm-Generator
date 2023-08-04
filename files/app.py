@@ -5,14 +5,15 @@ import numpy as np
 from model import RythmTransformer
 import os
 import argparse
-#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
-os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"]="0,2,3,4"
+import mp3
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+#os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+#os.environ["CUDA_VISIBLE_DEVICES"]="0,2,3,4"
 
 def main(num_samples, num_bars, temperature, prompt_dir ,output_dir):
     # declare model
     model = RythmTransformer(
-        checkpoint='files/REMI-tempo-chord-checkpoint',
+        checkpoint='REMI-tempo-chord-checkpoint',
         is_training=False)
 
     from_scratch_path = output_dir + 'from_scratch/'
